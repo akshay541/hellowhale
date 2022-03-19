@@ -13,7 +13,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("tejprakash/hellowhale:${env.BUILD_ID}")
+                    myapp = docker.build("tejprakashbkn/hellowhale:${env.BUILD_ID}")
                 }
             }
         }
