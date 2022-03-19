@@ -34,7 +34,7 @@ pipeline {
       steps {
         script {
           //kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "mykubeconfig")
-          sh 'sed -i 's/BUILDNUMBER/'$BUILD_ID'/g' hellowhale.yml'
+          sh 'sed -i \'s/BUILDNUMBER/\'$BUILD_ID\'/g\' hellowhale.yml'
           sh 'cat hellowhale.yml'
           sh 'kubectl apply -f hellowhale.yml'
         }
